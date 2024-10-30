@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'HakgyoansimDunggeunmisoTTF-B';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CookieRun-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'LOTTERIACHAB';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* HTML문서의 스타일을 설정하는 법
+            => head 태그 안에 작성!
+            => css는 html과 다른 언어이기 때문에, style이라는 태그 안에서만 작성
+            
+            "나 꾸밀거야!!"
+            - 무엇을? -> "선택자(selector)"
+            - 어떻게? -> "선언"
+
+            * 기본 구조 *
+            선택자 {
+                스타일속성 : 값;
+                스타일속성 : 값; => 이게 선언!
+            }
+            */
+
+        h1 {
+            /* color : 글씨 색상 */
+            color: bisque;
+
+            /* background-color : 요소의 배경색 */
+            background-color: darksalmon;
+
+            /* font-family : 글꼴의 집합, 최대한 비슷한 폰트 사용 */
+            font-family: 'HakgyoansimDunggeunmisoTTF-B';
+
+            /* 100~900숫자, bold(700), lighter 등등 사용 가능 */
+            font-weight: lighter;
+
+            font-style: italic;
+        }
+
+        h2 {
+            color: rgb(47, 208, 240);
+
+            background-color: rgb(197, 234, 221);
+
+            font-family: 'CookieRun-Regular';
+
+            font-weight: bold;
+
+            font-style: normal;
+        }
+
+        h3 {
+            color: rgb(254, 254, 254);
+
+            background-color: rgb(222, 173, 48);
+
+            font-family: 'LOTTERIACHAB';
+
+            font-weight: normal;
+
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>즐거운 HTML 수업</h1>
+    <h2>더 신나는 CSS 수업</h2>
+    <h3>예쁜 웹페이지를 만들어보자!</h3>
+</body>
+
+</html>
