@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1. 나 표 만들어야지! table 태그
+    2. 나 몇줄 만들어야지! tr태그
+    3. 나 줄 안에 칸 몇개 만들어야지! td태그
+    4. 칸 안의 데이터 : td의 content
+    -->
+
+    <table border="1px solid black">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <!-- 1) 표를 만들겠다고 선언하는 공간 : table -->
+    <table border="1px solid black">
+        <!-- tr 안에 td가 2개 있는걸 만들겠다 : tr>td*2 + 엔터 -->
+        <!-- 2) 표의 한 줄(행)을 생성 : table row (tr) -->
+        <tr>
+            <!-- 3) 표의 한 칸 데이터를 넣어주는 공간 : table data(td) -->
+            <!-- 3-1) table header (th)
+                      표의 헤더 부분을 작성할 때 용이
+                      글자가 굵어지고, 자동 가운데 정렬 -->
+            <th>이름</th>
+            <th>가격</th>
+        </tr>
+
+        <tr>
+            <td>김밥</td>
+            <td>3000</td>
+        </tr>
+
+        <tr>
+            <td>떡볶이</td>
+            <td>4500</td>
+        </tr>
+
+        <tr>
+            <td>라면</td>
+            <td>5000</td>
+        </tr>
+    </table>
+
+    <!-- 
+    셀 병합 기능! (th/td태그에 사용)
+    위/아래 병합 : rowspan 속성 
+    좌/우 병합 : colspan 속성
+    각 속성의 값에는 병합할 칸의 개수
+    -->
+
+    <table border="1px solid black">
+        <tr>
+            <td colspan="2">1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <table border="1px solid black">
+        <tr>
+            <td>이름</td>
+            <td>성별</td>
+            <td>과목</td>
+        </tr>
+
+        <tr>
+            <td>주미리</td>
+            <td>여자</td>
+            <td>Java</td>
+        </tr>
+
+        <tr>
+            <td>강태우</td>
+            <td rowspan="2">남자</td>
+            <td>Database</td>
+        </tr>
+
+        <tr>
+            <td>신재영</td>
+            <td>Python</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">미정</td>
+            <td>Crawling</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" rowspan="2">미정</td>
+            <td>JSP</td>
+        </tr>
+
+        <tr>
+            <td>Servlet</td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>
