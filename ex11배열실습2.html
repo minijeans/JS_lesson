@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 사용자에게 과목 수를 입력받는다
+        // 2. 사용자에게 과목 이름을 입력받는다
+        //    = 사용자가 준 과목 수 만큼 입력작업 반복
+        //    ** 사용자가 입력해준 과목명은 배열에 넣어서 관리
+        // 3. 사용자에게 각 과목의 점수를 입력받는다
+        //    ex. 자바-파이썬-디비 -> 배열에 담아서 자바 점수 입력~ -> 파이썬 점수 입력 -> ...
+        //    ** 사용자가 입력해준 점수도 새 배열에 넣어서 관리
+
+        // 4. 웹페이지에 출력
+        // - 반복문을 활용해서 배열에 담긴 정보를 웹에 출력
+        // - document.write()
+        // - 배열의 길이를 반환해주는 데이터
+        //   배열이름.length
+        document.write("")
+        let num = prompt("과목 수를 입력해주세요");
+        let name_list = [];
+        let score_list = [];
+        let sum = 0;
+
+        for (let i = 0; i < num; i++) {
+            name_list.push(prompt("점수를 입력할 과목명을 입력해주세요 >>"));
+        }
+
+        name_list.push("총합", "평균");
+
+        for (let i = 0; i < num; i++) {
+            score_list.push(prompt(name_list[i] + "의 점수 입력 >>"));
+            sum += Number(score_list[i]);
+        }
+
+        score_list.push(sum, sum / num);
+
+        // document.write(`<td> ${배열로빼낸값} </td>`)
+        document.write('<table border="1px solid black">');
+        document.write('<tr align = "center">');
+        for (let i = 0; i < name_list.length; i++) {
+            // document.write('<td>');
+            //     document.write(name_list[i]);
+            // document.write('</td>');
+            document.write(`<td> ${name_list[i]} </td>`);
+        }
+        document.write('</tr>');
+        document.write('<tr align = "center">');
+        for (let i = 0; i < score_list.length; i++) {
+            // document.write('<td>');
+            //     document.write(score_list[i]);
+            // document.write('</td>');
+            document.write(`<td> ${score_list[i]} </td>`);
+        }
+        document.write('</tr>');
+        document.write('</table>');
+
+    </script>
+</body>
+
+</html>
