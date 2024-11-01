@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hh">날씨가 흐려요~</h1>
+
+    <div></div>
+
+
+    <button id="btn">스타일변경</button>
+
+    <script>
+        let hh = document.getElementById("hh");
+        let btn = document.getElementById("btn");
+        let dd = document.getElementsByTagName("div")[0];
+
+        // 버튼을 클릭했을때, h1태그의 스타일 변경, 인라인으로 들어감(명시도 1000), (important 조건주면 명시도 10000)
+        btn.addEventListener("click", () => {
+            // 1. 요소의 전체 스타일 조회
+            console.log(hh.style);
+
+            // 2. 내가 원하는 디자인으로 수정
+            hh.style.color = 'blue';
+            // hh의 배경색을 노랑
+            hh.style.backgroundColor = 'yellow';
+
+            // div가 동그랗게 되어야 하고, 배경색 초록색
+            dd.style.backgroundColor = 'green';
+            dd.style.borderRadius = '100px';
+        })
+
+    </script>
+</body>
+
+</html>

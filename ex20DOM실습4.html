@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="ipt">
+    <button id="btn">입력</button>
+    <br>
+    <img id="image"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMTdfNzYg%2FMDAxNjQyNDI3NzYxMTcy.HPwCX-nelB9uskbeeXZqh3zfFJJPIBwD7xWenm9Oohcg.NEoT2aQVv2Pe3sk9w48TtdUwr11UdsxnQ2e5S34Winkg.PNG.reviewcasting%2Fimage.png&type=sc960_832"
+        width="200px">
+
+    <script>
+        // input에 고양이를 적고 입력 버튼을 누르면 이미지의 src가 고양이의 src로 바뀌게, -> 고양이/강아지
+
+        let img = document.getElementById("image");
+        let ipt = document.getElementById("ipt");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            if (ipt.value == "고양이") {
+                img.src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDJfMjA0%2FMDAxNzI3ODUyMzUwNjEy.sZoAZPDoKTCkeunsUeK2Yre7PIzqmqE09oCWnPCASoUg.nIr8tuhp3Q4fw25i6STer14Lv9LMNsB--v2_Ew0HdTAg.PNG%2F%25B0%25ED%25BE%25E7%25C0%25CC%25BA%25B9%25BC%25FE%25BE%25C62.png&type=sc960_832";
+            } else if (ipt.value == "강아지") {
+                img.src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA3MDJfMTk3%2FMDAxNzE5OTA5NTA4NTg5.OMNFdm6CD65dsnWzEGsuUmVCE-BgKH2EQ6Y-yV3U4f4g.i0a4e3pV3n0aMHIR_E4gueu347GDhkvrJ0qkl6JD6KEg.JPEG%2F1_%25284%2529.jpg&type=sc960_832";
+            } else {
+                alert("X");
+            }
+            ipt.value = '';
+
+        })
+        // 이미지 요소의 src 값에 접근하는 방법
+
+
+    </script>
+</body>
+
+</html>
