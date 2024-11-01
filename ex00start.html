@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> 한시간 있으면 밥먹어요~</h1>
+
+    <ul>
+        <li>아침에 산책하는데</li>
+        <li>투썸에..</li>
+        <li id="choco">스초생이 돌아왔어요.....</li>
+    </ul>
+    
+    <!-- 제이쿼리 로드하기 -->
+    <!-- 1. 직접 다운로드 받아서 로드 -->
+    <script src="/jquery-3.7.1.min.js"></script>
+    <!-- 2. CDN(Contert Delivery Network) -->
+    <!-- integrity, crossorigin은 보안 옵션이니 수정하지 말 것! -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+        
+    <!-- 로드 정의하고 적어줘야 함 -->
+    <script>
+        // 기본문법
+        // $(요소선택자).함수()
+
+        // 요소 내용 변경
+        $("h1").html("내용변경");
+
+        // 요소 스타일 수정
+        $("h1").css("color", "green");
+
+        // 다중 스타일 제어
+        $("h1").css({
+            "background-color" : "pink",
+            "font-family" : "궁서체",
+            "font-size" : "100px"
+        });
+
+        // 메소드 체인
+        $("li").css("color", "red").css("background-color", "pink").html("내용변경");
+        $("#choco").html("재변경");
+
+    </script>
+</body>
+
+</html>
